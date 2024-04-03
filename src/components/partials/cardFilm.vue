@@ -7,12 +7,27 @@ import { store } from '../../data/store';
       }
     },
 
+    methods:{
+      getStar(rating){
+        let stararray = []
+        for (let i = rating; i >= 1; i--) {
+         stararray.push('<i class="fa fa-star" aria-hidden="true" style="color: gold;"></i>&nbsp;');
+          if (i == .5) output.push('<i class="fa fa-star-half-o" aria-hidden="true" style="color: gold;"></i>&nbsp;');       
+        }
+        for (let i = (5 - rating); i >= 1; i--){
+            stararray.push('<i class="fa fa-star-o" aria-hidden="true" style="color: gold;"></i>&nbsp;');
+        }
+        console.log(stararray);
+        return stararray.join('')
+      }
+    },  
+
     props:{
       titolo: String,
       titoloOriginale:String,
       lingua: String,
       voto:Number,
-      img:String
+      img:String,
     }
   }
 </script>
@@ -30,7 +45,7 @@ import { store } from '../../data/store';
       <img :src="'src/img/'+ lingua + '.png'" alt="">
       
     </div>
-    <p class="card-text">{{voto}}</p>
+    <p v-html="getStar(voto)" class="card-text"></p>
   </div>
 </div>
 </template>

@@ -9,6 +9,14 @@ import {store} from '../data/store'
       }
     },
 
+    methods:{
+      
+    },
+
+    mounted(){
+     
+    },
+
     components:{
       cardFilm,
       cardTv
@@ -27,8 +35,9 @@ import {store} from '../data/store'
       :titolo="card.title"
       :titoloOriginale="card.original_title"
       :lingua="card.original_language"
-      :voto="card.vote_average"
+      :voto="Math.ceil(card.vote_average )/ 2"
       :img="card.poster_path"
+
       />
     </div>
     <h2>Serie TV</h2>
@@ -39,7 +48,7 @@ import {store} from '../data/store'
       :titolo="card.name"
       :titoloOriginale="card.original_name"
       :lingua="card.original_language"
-      :voto="card.vote_average"
+      :voto="Math.ceil(card.vote_average )/ 2"
       :img="card.poster_path"
       />
     </div>

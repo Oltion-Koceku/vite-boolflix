@@ -64,6 +64,11 @@ import axios from 'axios'
 </script>
 
 <template>
+   <div>
+    <font-awesome-icon icon="star" style="color: gold;"></font-awesome-icon>
+    <font-awesome-icon icon="star-half-alt" style="color: gold;"></font-awesome-icon>
+    <font-awesome-icon icon="star-empty" style="color: gold;"></font-awesome-icon>
+  </div>
   <Header 
     @searchMovie="getApiMovie(), getApiTv()"
   />
