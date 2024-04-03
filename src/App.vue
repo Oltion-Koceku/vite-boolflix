@@ -25,7 +25,28 @@ import axios from 'axios'
           store.cardArray = res.data.results
           console.log(res.data.results);
         })  
-      }
+
+        .catch(error =>{
+          console.log("errore");
+        })
+      },
+      getApiTv(){
+        this.axios.get(store.urlApiTv, {
+          params:{
+            api_key: store.api_key,
+            query: store.query,
+            language: store.language
+          }
+        })
+        .then(res =>{
+          store.cardArrayTv = res.data.results
+          console.log(res.data.results);
+        })  
+
+        .catch(error =>{
+          console.log("errore");
+        })
+      },
     },
 
     components:{
@@ -35,7 +56,7 @@ import axios from 'axios'
     },
 
     mounted(){
-      this.getApiMovie()
+    
     }
 
 
@@ -44,7 +65,7 @@ import axios from 'axios'
 
 <template>
   <Header 
-    @searchMovie="getApiMovie()"
+    @searchMovie="getApiMovie(), getApiTv()"
   />
   <Main />
 </template>
