@@ -35,7 +35,7 @@ import {store} from '../data/store'
       :titolo="card.title"
       :titoloOriginale="card.original_title"
       :lingua="card.original_language"
-      :voto="Math.ceil(card.vote_average )/ 2"
+      :voto="Math.ceil(card.vote_average / 2)"
       :img="card.poster_path"
 
       />
@@ -48,7 +48,7 @@ import {store} from '../data/store'
       :titolo="card.name"
       :titoloOriginale="card.original_name"
       :lingua="card.original_language"
-      :voto="Math.ceil(card.vote_average )/ 2"
+      :voto="Math.ceil(card.vote_average / 2)"
       :img="card.poster_path"
       />
     </div>
