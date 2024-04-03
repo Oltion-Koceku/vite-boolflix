@@ -7,6 +7,7 @@ export const store = reactive({
   api_key :"a50ca3005badeb852c0271093f3db1e5",
   cardArray:[],
   cardArrayTv:[],
+  urlImg:"https://image.tmdb.org/t/p/w185",
   query: "",
   language:"it"
 })

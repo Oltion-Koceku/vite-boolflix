@@ -11,14 +11,15 @@ import { store } from '../../data/store';
       titolo: String,
       titoloOriginale:String,
       lingua: String,
-      voto:Number
+      voto:Number,
+      img:String
     }
   }
 </script>
 
 <template>
   <div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="..." alt="Card image cap">
+  <img class="card-img-top" :src="store.urlImg + img" alt="Card image cap">
   <div class="card-body">
     <p class="card-text">{{titolo}}</p>
     <p class="card-text">{{titoloOriginale}}</p>

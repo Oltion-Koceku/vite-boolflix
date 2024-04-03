@@ -28,6 +28,7 @@ import {store} from '../data/store'
       :titoloOriginale="card.original_title"
       :lingua="card.original_language"
       :voto="card.vote_average"
+      :img="card.poster_path"
       />
     </div>
     <h2>Serie TV</h2>
@@ -39,7 +40,9 @@ import {store} from '../data/store'
       :titoloOriginale="card.original_name"
       :lingua="card.original_language"
       :voto="card.vote_average"
-      /></div>
+      :img="card.poster_path"
+      />
+    </div>
       
   </div>
 </template>
