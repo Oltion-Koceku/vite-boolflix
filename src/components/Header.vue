@@ -15,7 +15,11 @@ import {store} from '../data/store'
   <div class="container bg-black">
     <div class="searchbar d-flex justify-content-between align-items-center text-danger ">
       <h1>BOOLFLIX</h1>
-      <input type="text" placeholder="Cerca il tuo film..">
+      <div>
+        <input type="text" v-model="store.query" placeholder="Cerca il tuo film..">
+        <button @click="$emit('searchMovie')" class="btn btn-danger">cerca</button>
+      </div>
+      
     </div>
   </div>
 </template>

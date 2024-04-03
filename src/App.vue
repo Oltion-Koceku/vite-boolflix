@@ -43,7 +43,9 @@ import axios from 'axios'
 </script>
 
 <template>
-  <Header />
+  <Header 
+    @searchMovie="getApiMovie()"
+  />
   <Main />
 </template>
 
