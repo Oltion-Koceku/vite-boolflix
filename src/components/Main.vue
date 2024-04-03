@@ -11,13 +11,18 @@ import {store} from '../data/store'
 
 
 <template>
-  <div>
-    
+  <div class="container">
+    <div class="row row-cols-4 ">
+      
+    </div>
   </div>
 </template>
 
 
 
 <style lang="scss" scoped>
-
+  .container{
+    height: 100vh;
+    background-color: gray;
+  }
 </style>
