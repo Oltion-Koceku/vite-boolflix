@@ -8,6 +8,6 @@ export const store = reactive({
   cardArray:[],
   cardArrayTv:[],
   urlImg:"https://image.tmdb.org/t/p/w185",
-  query: "",
+  query: "dragon ball",
   language:"it"
 })
