@@ -24,7 +24,8 @@ import { store } from '../../data/store';
 
       flipCard(){
         this.flipped = !this.flipped
-      }
+      },
+      
     },  
 
     props:{
@@ -67,11 +68,13 @@ import { store } from '../../data/store';
             <span v-html="getStar(voto)"></span>
             
           </div>
+
+          <div><h4>Cliccami per la descrizione</h4></div>
           
         </div>
     </div>
     <div class="card-right" :class="flipped === true ? 'd-block' : 'd-none'" >
-      <div class="description ">
+      <div class="description d-flex flex-column justify-content-center ">
         <h4>Descrizione:</h4>
         <p>{{ description }}</p>
       </div>
@@ -97,6 +100,11 @@ import { store } from '../../data/store';
     border-radius: 20px;
     background-color: #415051;
     padding: 0;
+    &:hover{
+      scale: 120%;
+      transition: 1s;
+      cursor: pointer;
+    }
     .flip{
       position: relative;
       width: 100%;

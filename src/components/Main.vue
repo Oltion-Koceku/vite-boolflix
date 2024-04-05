@@ -10,7 +10,19 @@ import {store} from '../data/store'
     },
 
     methods:{
-      
+      getId(index){
+        store.cardArray[index].id
+      },
+
+      getApiActor(){
+        this.axios.get(store.urlApiActors, {
+          params:{
+            movie_id: this.getId(index),
+            api_key: store.api_key
+
+          }
+        })
+      }
     },
 
     mounted(){
@@ -20,6 +32,7 @@ import {store} from '../data/store'
     components:{
       cardFilm,
       cardTv
+     
     }
   }
 </script>
